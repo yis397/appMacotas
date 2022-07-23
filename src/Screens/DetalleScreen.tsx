@@ -5,7 +5,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStParams } from '../Routes/Route';
 
 interface Prop extends NativeStackScreenProps<RootStParams,'DetalleScreen'>{};
-const DetalleScreen=({route,navigation}:Prop)=> {
+export const DetalleScreen=({route,navigation}:Prop)=> {
     
     const {petState,deletRecor} = useContext(PetsContext);
     const popNavgacion=()=>navigation.pop()
@@ -16,4 +16,3 @@ const DetalleScreen=({route,navigation}:Prop)=> {
     );
 }
 
-export default DetalleScreen;

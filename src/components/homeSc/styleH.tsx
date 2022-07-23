@@ -9,7 +9,7 @@ const screWidth = Dimensions.get('screen').width;
 export const styleh=StyleSheet.create({
     container:{
         flex:1,
-        backgroundColor:colores.primario
+        backgroundColor:'#ffff',
 
     },
 
@@ -25,13 +25,14 @@ export const styleh=StyleSheet.create({
    },
    textSub:{
     fontWeight:"bold",
-    color:"#4A350C"
+    color:colores.texto
    },
     head:{
        flex:1,
        justifyContent:"space-around",
        alignItems:"center",
-       marginTop:20
+       marginTop:20,
+       
        
    },
     foot:{
@@ -59,12 +60,12 @@ export const styleh=StyleSheet.create({
 },
 
 shadow:{
-    shadowColor: "#000",
+    shadowColor: "#D68910",
     shadowOffset: {
-        width: 0,
-        height: 12,
+        width: 5,
+        height: 2,
     },
-    shadowOpacity: 0.38,
+    shadowOpacity: 0.5,
     shadowRadius: 16.00,
     
     elevation: 24,
@@ -76,7 +77,7 @@ notiSub:{
 },
 notiData:{
     paddingStart:20,
-    borderBottomColor:"white",
+    borderBottomColor:"#D68910",
      flex:3,
      flexDirection:"row",
      paddingEnd:10,

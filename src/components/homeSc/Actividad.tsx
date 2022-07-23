@@ -41,7 +41,7 @@ function Actividad({cerrarM}:Prop) {
     return (
         <View style={[styleM.container]}>
 
-            <Text>A G R E G A  U N  R E C O R D A T O R I O</Text>
+            <Text style={{color:colores.texto}}>A G R E G A  U N  R E C O R D A T O R I O</Text>
            <InputText {...{nombre:"nombre",etiqueta:"Nombre Actividad",ancho:250,color:colores.primario,setValor:setValor,valor:nombre}}/>
            <TextInput
            placeholder='R E C O R D A T O R I O'
@@ -49,7 +49,7 @@ function Actividad({cerrarM}:Prop) {
            numberOfLines={4}
            onChangeText={(valor)=>setValor(valor,"actividad")}
            value={actividad}
-           style={{backgroundColor:colores.terciar,width:250,borderRadius:15,height:150}}
+           style={{width:250,borderRadius:15,height:150}}
            />
            <View style={{alignSelf:"flex-start",flexDirection:"row",justifyContent:"space-around",paddingStart:15}}>
                         <Text style={{marginEnd:50}}>Fecha a recordar</Text>

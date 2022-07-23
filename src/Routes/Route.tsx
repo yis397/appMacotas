@@ -2,11 +2,8 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import InicioScreen from '../Screens/InicioScreen';
-import HomeScreen from '../Screens/HomeScreen';
-import DetalleScreen from '../Screens/DetalleScreen';
 import { Mascota,Recordatorio } from '../interface';
-import TabsRoute from './TabsRoute';
+import {TabMedicamentos,HomeScreen,DetalleScreen} from '../Screens/index';
 
 export type RootStParams={
   HomeScreen:undefined,
@@ -25,7 +22,7 @@ const Route = () => {
       }}>
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="DetalleScreen" component={DetalleScreen} />
-        <Stack.Screen  name="MedicalScreen" component={TabsRoute} />
+        <Stack.Screen  name="MedicalScreen" component={TabMedicamentos} />
       </Stack.Navigator>
     </NavigationContainer>
   )

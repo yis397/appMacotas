@@ -26,7 +26,7 @@ function FondoD({recordatorio,mascota,navigation,funcion}:Prop) {
                     source={{uri:(mascota.img!=""?mascota.img:"http://via.placeholder.com/200x400")}}
                     style={{height:200,width:"100%",backgroundColor:"white"}}/>
          </View>
-         <Text style={{color:"#4A350C",
+         <Text style={{color:colores.texto2,
         fontWeight:"bold",textTransform:"uppercase"}}>{mascota.nombre}</Text>
          </View>
              <ScrollView style={styleD.content}>
@@ -36,7 +36,7 @@ function FondoD({recordatorio,mascota,navigation,funcion}:Prop) {
                  <View style={styleD.dato}><Text style={styleD.detailSub}>Sexo:  </Text><Text style={styleD.detailDat}>Hembra</Text></View>
                  <View style={styleD.dato}><Text style={styleD.detailSub}>Edad:  </Text><Text style={styleD.detailDat}>24</Text></View>
              </View>
-             <Text>S U S  R E C O R D A T O R I O S</Text>
+             <Text style={{}}>S U S  R E C O R D A T O R I O S</Text>
              {recordatorio.length!=0?recordatorio.map((item:Recordatorio,i)=><View key={i} style={{marginTop:20}}><CardRecord record={item} funcion={()=>funcion(item.id,item.idP)}/></View>):<Text>no tiene algun recordatorio</Text>}
              
              </ScrollView>
@@ -101,10 +101,11 @@ const styleD=StyleSheet.create({
         textAlign:"left",
         fontSize:12,
         marginRight:50,
-        color:"#4A350C",
+        color:colores.texto,
         fontWeight:"bold"
     },detailDat:{
         fontSize:15,
+        color:colores.texto2
     }
 
 })

@@ -39,7 +39,7 @@ export default ModalH;
     container:{
         
         flex:1,
-        backgroundColor:"rgba(156,212,202,.6)",
+        backgroundColor:"rgba(245, 176, 65 ,.6)",
        
     },
     

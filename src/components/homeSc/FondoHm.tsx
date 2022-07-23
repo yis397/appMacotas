@@ -37,7 +37,7 @@ const FondoHm=({icons,modal,editM,goDetail}:Prop)=> {
         <ScrollView>
             <View style={styleh.head}>
                  {pets.length!=0?
-                 <TouchableOpacity style={styleh.perfil} onPress={()=>goDetail()}>
+                 <TouchableOpacity style={{...styleh.perfil,...styleh.shadow}} onPress={()=>goDetail()}>
                    <Image
                     source={{uri:(seleccion.img!=""?seleccion.img:"http://via.placeholder.com/200x400")}}
                     style={{height:200,width:"100%",backgroundColor:"white"}}/>
@@ -56,22 +56,23 @@ const FondoHm=({icons,modal,editM,goDetail}:Prop)=> {
                     <Text style={[styleh.textSub,{flex:1}]}>D i a:</Text>
                     <Text style={[styleh.textSub,{flex:1}]}>H r</Text>
                     </View>
+                   
                     <View style={styleh.notiData}>
-                        <Text style={{flex:3}}>{recordatorio.length!=0?recordatorio[index].actividad:"no hay"}</Text>
-                        <Text style={{flex:1}}>{recordatorio.length!=0?recordatorio[index].fecha:"null"}</Text>
-                        <Text style={{flex:1}}>{recordatorio.length!=0?recordatorio[index].hora:"null"}</Text>
+                        <Text style={{flex:3,color:colores.texto2}}>{recordatorio.length!=0?recordatorio[index].actividad:"no tiene actividades"}</Text>
+                        <Text style={{flex:1,color:colores.texto2}}>{recordatorio.length!=0?recordatorio[index].fecha:""}</Text>
+                        <Text style={{flex:1,color:colores.texto2}}>{recordatorio.length!=0?recordatorio[index].hora:""}</Text>
 
                     </View>
                     {(recordatorio.length>1?<View style={{position:"absolute",alignSelf:"flex-end",top:30,right:10}}><ButIcon funcion={()=>cambiar()} icon={"chevron-forward-outline"}/></View>:<></>)}
                 </View>
             </View>
             <View style={[styleh.foot,styleh.shadow]}>
-            <LinearGradient start={{x: .5, y: 1}} end={{x: 0, y: .2}} colors={[colores.cuarto, colores.primario]} style={styleh.foot}>
+            <LinearGradient start={{x: .5, y: 1}} end={{x: 0, y: .2}} colors={[colores.secund2, colores.secund2]} style={styleh.foot}>
               <View style={styleh.iconos}>    
                  {icons.map((item,i)=><View key={i}>{item}</View>)}
               </View>
               <View style={styleh.lista}>
-                  <Text>Tus Mascotas:</Text>
+                  <Text style={{color:colores.texto2}}>Tus Mascotas:</Text>
                   <ScrollView >
                       {pets.length==0?<Text style={{textAlign:"center",marginTop:100}}>AQUI ESTARAN TUS MASCOTAS</Text>:pets.map((item,i)=><View key={i}><CardPets i={i} editM={editM} item={item}/></View>)}
 

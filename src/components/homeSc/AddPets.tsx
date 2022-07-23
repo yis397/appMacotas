@@ -73,7 +73,7 @@ function AddPets({cerrarM,tipo}:Prop) {
 
                <View style={[styleM.body,styleM.center]}>
                    {
-                       (tipo!=1?<Text>E D I T A  A  {petState.seleccion.nombre}</Text>:<Text>A G R E G A  A  U N  A M I G O</Text>)
+                       (tipo!=1?<Text style={{color:colores.texto}}>E D I T A  A  {petState.seleccion.nombre}</Text>:<Text>A G R E G A  A  U N  A M I G O</Text>)
                    }
                    <View style={{...styleM.form,flex:3}}>
                         <InputText {...{nombre:"nombre",etiqueta:"Nombre",ancho:250,color:colores.primario,setValor:setValor,valor:nombre}}/>
